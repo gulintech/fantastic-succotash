@@ -15,6 +15,11 @@
           // This callback is triggered with the scanned data as 'scannedData'
           // Send scanned data back to the bot
           Telegram.WebApp.sendData(scannedData);
+
+          // Close the Web App after sending the data
+          // Note: This is contingent on how your bot handles the received data
+          // and whether closing the app immediately is the desired behavior.
+          Telegram.WebApp.close();
         });
       });
     </script>
